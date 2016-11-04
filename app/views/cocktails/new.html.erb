@@ -1,0 +1,15 @@
+<h1>add your cocktail</h1>
+<%= form_for (@cocktail) do |f| %>
+<% if @cocktail.errors.any? %>
+<div id="error_explanation">
+<ul>
+<%= @cocktails.errors.full_messages.each do |message| %>
+<li> <%#= no empty fields possible %> </li>
+<% end %>
+<% end %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+
+<%= f.submit "add cocktails", class: "btn btn-primary" %>
+<% end %>
