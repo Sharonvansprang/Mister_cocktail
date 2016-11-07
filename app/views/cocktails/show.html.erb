@@ -1,15 +1,18 @@
-<h1>Cocktails#show</h1>
-<p>Find me in app/views/cocktails/show.html.erb</p>
+<h1>Created Cocktails</h1>
+<p>Find the best created cocktails here</p>
 
-<%= link_to 'Add ingredient',new_cocktail_dose_path(@cocktail) %>
+<%= cl_image_tag("v3ppwm34bcbbd54h5zyc",
+      :width=>350, :height=>250, :radius=>20, :crop=>"fill") %>
 
 
 <h2><%= @cocktail.name %></h2>
+<%= link_to 'Add ingredient', new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
 <% @cocktail.doses.each do |dose| %>
-  <%= dose.description %> : <%= dose.ingredient.name %>
-  <%= link_to 'Delete ingredient', cocktail_dose_path(@cocktail,dose.id), method: :delete, data: { confirm: 'Are you sure?' } %>
-<% end %>
+  <%= dose.description %>
+  <%= dose.ingredient.name %>
 
+  <%= link_to 'Delete ingredient',cocktail_dose_path(@cocktail, dose.id), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default"%>
+<% end %>
 <%= link_to 'Edit', edit_cocktail_path(@cocktail), class: "btn btn-primary" %>
 <%= link_to 'Back', cocktails_path, class: "btn btn-default" %>
 

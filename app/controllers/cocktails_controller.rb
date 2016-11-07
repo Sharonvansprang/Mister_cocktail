@@ -17,6 +17,7 @@ class CocktailsController < ApplicationController
     redirect_to cocktail_path(@cocktail)
   end
 
+
   private
 
   def find_cocktail
@@ -24,6 +25,6 @@ class CocktailsController < ApplicationController
   end
 
   def cocktail_params
-    params.require(:cocktail).permit(:name)
+    params.require(:cocktail).permit(:name, :photo, :photo_cache)
   end
 end

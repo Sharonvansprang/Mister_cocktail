@@ -16,16 +16,20 @@ Ingredient.create(name: "sparkling water")
 Ingredient.create(name: "strawberry")
 Ingredient.create(name: "tonic")
 Ingredient.create(name: "gin")
+Ingredient.create(name: "brown sugar")
+Ingredient.create(name: "mango")
+Ingredient.create(name: "alchohol")
+Ingredient.create(name: "whiskey")
 
 
 
-Cocktail.create(name: "Star was cocktail")
+Cocktail.create(name: "Star wars cocktail")
  Cocktail.create(name: "Smurfs cocktail")
 Cocktail.create(name: "Sex in the city cocktail")
 Cocktail.create(name: "Empire cocktail")
 Cocktail.create(name: "Heerlijke cocktail")
-Cocktail.create(name: "Daiquir Manog")
-Cocktail.create(name: "Show coctail")
+Cocktail.create(name: "Daiquiri Mango")
+Cocktail.create(name: "Show cocktail")
 Cocktail.create(name: "Rake cocktail")
 
 
